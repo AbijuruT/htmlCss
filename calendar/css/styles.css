@@ -1,0 +1,220 @@
+/* GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+/* CSS VARIABLES */
+:root {
+  /* DARK COLORS */
+  --dark-body: #4d4c5a;
+  --dark-main: #141529;
+  --dark-second: #79788c;
+  --dark-hover: #323848;
+  --dark-text: #f8fbff;
+
+  /* LIGHT COLORS */
+  --light-body: #f3f8fe;
+  --light-main: #fdfdfd;
+  --light-second: #c3c2c8;
+  --light-hover: #edf0f5;
+  --light-text: #151426;
+
+  /* BASE COLORS */
+  --blue: #0000ff;
+  --white: #fff;
+
+  --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  --body-font: "Poppins", sans-serif;
+}
+.dark {
+  --body-bg: var(--dark-body);
+  --main-bg: var(--dark-main);
+  --second-bg: var(--dark-second);
+  --hover-color: var(--dark-hover);
+  --text-color: var(--dark-text);
+}
+.light {
+  --body-bg: var(--light-body);
+  --main-bg: var(--light-main);
+  --second-bg: var(--light-second);
+  --hover-color: var(--light-hover);
+  --text-color: var(--light-text);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    font-family: var(--body-font);
+    background-color: var(--body-bg);
+    
+}
+.calender{
+    height: max-content;
+    width: max-content;
+    border-radius: 30px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.light .calender{
+    box-shadow: var(--shadow);
+    background-color: var(--white);
+}
+.dark .calender{
+    background-color: var(--dark-main);
+}
+.calender__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--text-color);
+    padding: 10px;
+}
+.calender__body{
+    padding: 10px;
+}
+.calender__week-day{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-weight: 600;   
+    height: 50px;
+}
+.calender__week-day div{
+    display: grid;
+    place-items: center;
+    color: var(--second-bg);
+}
+.calender__days{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    color: var(--text-color);
+}
+.calender__days div{
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    position: relative;
+    cursor: pointer;
+}
+.month__picker{
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.month__picker:hover{
+    background-color: var(--hover-color);
+}
+.year__picker{
+    display: flex;
+    align-items: center;
+}
+.year__change{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.year__change:hover{
+    background-color: var(--hover-color);
+}
+.calender__footer{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+}
+.toggle{
+    display: flex;
+}
+.toggle span{
+    margin-right: 10px;
+    color: var(--text-color);
+}
+.dark__mode-switch{
+    position: relative;
+    width: 48px;
+    height: 25px;
+    border-radius: 14px;
+    background-color: var(--second-bg);
+    cursor: pointer;
+
+}
+.dark__mode-switch-ident{
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    background-color: var(--main-bg);
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: left .2s ease-in-out;
+}
+.dark .dark__mode-switch .dark__mode-switch-ident{
+    top: 2px;
+    left: calc(2px + 50%);
+}
+.calender__days div span{
+    position: absolute;
+}
+.calender__days div:hover span{
+    transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+}
+.calender__days div span:nth-child(1),
+.calender__days div span:nth-child(3){
+    width: 2px;
+    height: 0;
+    background-color: var(--text-color);
+}
+.calender__days div:hover span:nth-child(1),
+.calender__days div:hover span:nth-child(3){
+    height: 100%;
+}
+.calender__days div span:nth-child(1){
+    bottom: 0;
+    left: 0;
+}
+.calender__days div span:nth-child(3){
+    top: 0;
+    right: 0;
+}
+.calender__days div span:nth-child(2),
+.calender__days div span:nth-child(4){
+    width: 0;
+    height: 2px;
+    background: var(--text-color);
+}
+.calender__days div:hover span:nth-child(2),
+.calender__days div:hover span:nth-child(4){
+    width: 100%;
+}
+.calender__days div:hover span:nth-child(2){
+    top: 0;
+    left: 0;
+}
+.calender__days div:hover span:nth-child(4){
+    bottom: 0;
+    right: 0;
+}
+.calender__days div:hover span:nth-child(2){
+    transition-delay: 0.2s;
+}
+.calender__days div:hover span:nth-child(3){
+    transition-delay: 0.4s;
+}
+.calender__days div:hover span:nth-child(4){
+    transition-delay: 0.6s;
+}
