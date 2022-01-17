@@ -1,0 +1,66 @@
+/* CSS Variables */
+:root {
+  --body-color: #111;
+  --terminal-color: #000;
+  --text-color: #0b9c06;
+}
+/* base styling */
+* {
+  box-sizing: border-box;
+}
+body {
+  background: var(--body-color);
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  overflow: hidden;
+  margin: 0;
+}
+.terminal {
+  width: 100%;
+  height: 100%;
+  max-width: 620px;
+  max-height: 320px;
+  background: var(--terminal-color);
+  border-radius: 0.5rem;
+}
+.menu {
+  display: flex;
+  padding: 0.7rem;
+  border-bottom: 1px solid var(--body-color);
+}
+.dot{
+  width: 16px;
+  height: 16px;
+  margin: 0.4rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.dot:nth-child(1){
+  background-color: #f03413;
+
+}
+.dot:nth-child(2){
+  background-color: #f3880e;
+
+}
+.dot:nth-child(3){
+  background-color: #0b9c06;
+
+}
+.text {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.4rem;
+  color: #0b9c06;
+  font-size: 1.18rem;
+  font-weight: 400;
+}
+.text #root{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
