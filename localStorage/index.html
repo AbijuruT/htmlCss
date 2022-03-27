@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../boxicons/css/boxicons.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Book list</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="book">
+            <div class="book__header">
+                <span class="icon"><i class="bx bx-book-reader"></i></span>
+                <span class="title">Book List</span>
+            </div>
+            <!-- <div class="book__notify">
+                <span id="notification">Removed</span>
+            </div> -->
+
+            <div class="book__form">
+                <input type="text" class="book__input" id="title" placeholder="Title">
+            </div>
+            <div class="book__form">
+                <input type="text" class="book__input" id="author" placeholder="Author">
+            </div>
+            <div class="book__form">
+                <input type="text" class="book__input" id="book-isbn" placeholder="Book code">
+            </div>
+            <div class="book__form">
+                <button class="book__btn" id="book-btn">Save</button>
+            </div>
+        </div>
+        <div class="saved__book">
+            <table class="book__table">
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Code</th>
+                </tr>
+                <tr>
+                    <td>Atomic habit</td>
+                    <td>James clear</td>
+                    <td>454521215455</td>
+                    <td>
+                        <button class="delete__icon">
+                            <i class="bx bx-x"></i>
+                        </button>
+                    </td>
+                </tr>
+                
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
