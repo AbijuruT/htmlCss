@@ -1,0 +1,74 @@
+:root{
+    --yellow-color: #ffee00;
+    --orange-color: #ffa600;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    height: 100vh;
+    background: #111;
+    overflow: hidden;
+}
+label{
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+label input{
+    /* appearance: none; */
+}
+label .face{
+    position: absolute;
+    inset: 0;
+    background: #666;
+    border-radius: 50%;
+    cursor: pointer;
+}
+label input:checked ~ .face{
+    background: var(--yellow-color);
+}
+label input:checked ~ .face{
+    background: var(--orange-color);
+}
+label .face::before{
+    content: '';
+    position: absolute;
+    top: 60px;
+    left: 45px;
+    width: 15px;
+    height: 15px;
+    background: #000;
+    opacity: 0.5;
+    border-radius: 50%;
+    box-shadow: 45px 0 0 #000;
+    transition: .5s;
+}
+label .face::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 45px;
+    background: #000;
+    opacity: 0.5;
+    width: 40px;
+    height: 8px;
+    transform: translateX(-50%);
+    border-radius: 8px;
+    transition: .5s ease-in;
+}
+label input:checked ~ .face::after{
+    width: 40px;
+    height: 20px;
+    border-radius: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transform: translateX(-50%) translateY(10px);
+}

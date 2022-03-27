@@ -1,7 +1,7 @@
 const textEl = document.getElementById("cmd");
 const speedEl = 2;
 const msg =
-  " We are anonymous, we are region, we do not forget, we do not forgive. Expect us.";
+  " We are anonymous, we are region, we do not forget, we do not forgive.Expect us.";
 let x = 1;
 let speed = 300 / speedEl;
 

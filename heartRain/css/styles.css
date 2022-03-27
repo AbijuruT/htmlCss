@@ -1,0 +1,41 @@
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;900&display=swap');
+/* CSS VARIABLES */
+:root{
+    --heart-color: #f80626f1;
+    --body-color: #fff;
+}
+
+/* BASE STYLING */
+*{
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    background: var(--body-color);
+
+}
+h1{
+    color: var(--heart-color);
+}
+/* heart element */
+.heart{
+    color: var(--heart-color);
+    position: fixed;
+    top: -1vh;
+    transform: translateY(0);
+    animation: rainingHearts 3s linear forwards;
+    z-index: 1;
+}
+/* Animation */
+@keyframes rainingHearts{
+    to{
+        transform: translateY(105vh);
+    }
+}
