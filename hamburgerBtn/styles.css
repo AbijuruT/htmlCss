@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #fff;
+  overflow: hidden;
+}
+#hamburger {
+  background: #1b47b7;
+  border: 0;
+  color: #fff;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 0.5rem 0.75rem;
+  font-size: 1.25rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+#hamburger:focus {
+  outline: none;
+}
+#hamburger:hover {
+  background: #385397;
+}
+#hamburger.active {
+  transform: translateX(-100px);
+}
+nav {
+  position: fixed;
+  background-color: #111;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  padding: 2rem;
+  transform: translateX(100%);
+  transition: 0.5s ease-in;
+}
+nav.active {
+  transform: translateX(0);
+}
+
+nav ul {
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
+}
+nav ul li {
+  padding: 1rem 0;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+nav a:hover {
+  font-weight: 600;
+}
