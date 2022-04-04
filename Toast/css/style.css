@@ -22,8 +22,6 @@ body{
     font-size: 1.75em;
     color: #FFF;
     border-radius: .5rem;
-    /* transition: all .5s linear; */
-
 }
 .show__not-btn:focus{
     outline: none;
