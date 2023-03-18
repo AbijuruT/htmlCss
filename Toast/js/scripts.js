@@ -1,7 +1,7 @@
 const notificationBtn = document.getElementById("show-not");
 const container = document.getElementById("container");
 
-// Click event
+// Click event 
 notificationBtn.addEventListener("click", showToast);
 
 function showToast() {
@@ -15,7 +15,7 @@ function showToast() {
 
   const toast = document.createElement("div");
   toast.classList.add("toast__notification");
-  // Randomly pick a sentence from array
+  // Randomly pick a sentence from array 
   const randomWord = Math.floor(Math.random() * sentences.length);
   // Show text on screen
   toast.textContent = sentences[randomWord];

@@ -1,0 +1,50 @@
+/* Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;900&display=swap");
+:root {
+  --yellow-color: #f6fa0c;
+  --blue-color: #0c3fca;
+  --green-color: #06a536;
+  --white-color: #fff;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Mochiy Pop P One", "Poppins", sans-serif;
+  margin: 0;
+}
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+span {
+  position: relative;
+  display: inline-block;
+  font-size: 1em;
+  color: var(--white-color);
+  overflow: hidden;
+  background: linear-gradient(
+    to right,
+    var(--blue-color) 10%,
+    var(--yellow-color) 30%,
+    var(--green-color) 50%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 0.9s ease-in-out;
+}
+span:hover {
+  cursor: pointer;
+  background-position: 0 100%;
+}
