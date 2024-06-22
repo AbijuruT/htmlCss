@@ -29,6 +29,7 @@ h1{
     color: var(--heart-color);
     position: fixed;
     top: -1vh;
+    font-size: 1.5rem;
     transform: translateY(0);
     animation: rainingHearts 3s linear forwards;
     z-index: 1;
