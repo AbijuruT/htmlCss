@@ -23,14 +23,14 @@ To view and interact with the projects, follow these steps:
 
 ```bash
 Open index.html
-
+```
 ## Installation
 
 To get started with these projects, you can clone this repository to your local machine using the following command:
 
 ```bash
 git clone https://github.com/AbijuruT/htmlCss.git
-
+```
 ## Contributing
 
 Contributions are welcome! If you have a new project or improvements to an existing one, feel free to fork this repository, make your changes, and create a pull request.
