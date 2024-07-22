@@ -1,0 +1,18 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--body-bg: #1e1f25;
+	--btn-bg: #000;
+	--btn-color: #cbcbcb;
+	--btn-color-hover: #fff;
+	--grad-color1: #eeaf61;
+	--grad-color2: #fb9062;
+	--grad-color3: #ee5d6c;
+	--grad-color4: #ce4993;
+	--grad-color:  #6a0d83;
+}
+
