@@ -13,6 +13,37 @@
 	--grad-color2: #fb9062;
 	--grad-color3: #ee5d6c;
 	--grad-color4: #ce4993;
-	--grad-color:  #6a0d83;
+	--grad-color5:  #6a0d83;
 }
 
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+  background: var(--body-bg);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.btn__border{
+  background: linear-gradient(115deg, var(--grad-color1), var(--grad-color2), var(--grad-color3), var(--grad-color4), var(--grad-color5));
+  padding: 2px;
+}
+.btn{
+  border: none;
+  background: var(--btn-bg);
+  color: var(--btn-color);
+  padding: 1em 1.5em;
+  font-family: inherit;
+  letter-spacing: .1em;
+  cursor: pointer;
+  transition: all .3s ease-in;
+}
+.btn__border:hover{
+  background: linear-gradient(230deg, var(--grad-color1), var(--grad-color2), var(--grad-color3), var(--grad-color4), var(--grad-color5));
+
+}
+.btn__border:hover .btn{
+  color: var(--btn-color-hover);
+  padding: 1.1em 1.6em;
+}
